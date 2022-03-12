@@ -1,0 +1,39 @@
+import 'dart:async';
+import 'package:firstflutter/Appbar.dart';
+import 'package:flutter/material.dart';
+import 'HomeScreen.dart';
+
+class SpalashScreen extends StatefulWidget {
+  const SpalashScreen({Key? key}) : super(key: key);
+
+  @override
+  _SpalashScreenState createState() => _SpalashScreenState();
+  }
+class _SpalashScreenState extends State<SpalashScreen> {
+
+  @override
+  void initState() {
+    super.initState();
+    Timer(Duration(seconds: 5),
+            ()=>Navigator.pushReplacement(context,
+            MaterialPageRoute(builder:
+                (context) =>
+                    durgesh()
+            )
+        )
+    );
+  }
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/splashs.png"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: null /* add child content here */,
+      ),
+    );
+  }
+}
